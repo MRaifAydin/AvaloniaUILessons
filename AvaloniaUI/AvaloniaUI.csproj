@@ -6,6 +6,30 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\Cog.png" />
+    <None Remove="Assets\Cog.svg" />
+    <None Remove="Assets\DoubleArrow.png" />
+    <None Remove="Assets\DoubleArrow.svg" />
+    <None Remove="Assets\Export.png" />
+    <None Remove="Assets\Export.svg" />
+    <None Remove="Assets\Lock.png" />
+    <None Remove="Assets\Lock.svg" />
+    <None Remove="Assets\Monitor.png" />
+    <None Remove="Assets\Monitor.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\Cog.png" />
+    <AvaloniaResource Include="Assets\Cog.svg" />
+    <AvaloniaResource Include="Assets\DoubleArrow.png" />
+    <AvaloniaResource Include="Assets\DoubleArrow.svg" />
+    <AvaloniaResource Include="Assets\Export.png" />
+    <AvaloniaResource Include="Assets\Export.svg" />
+    <AvaloniaResource Include="Assets\Lock.png" />
+    <AvaloniaResource Include="Assets\Lock.svg" />
+    <AvaloniaResource Include="Assets\Monitor.png" />
+    <AvaloniaResource Include="Assets\Monitor.svg" />
+  </ItemGroup>
 
   <ItemGroup>
     <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
@@ -16,6 +40,7 @@
     <PackageReference Include="Avalonia.Desktop" Version="0.10.18" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18" />
+    <PackageReference Include="Avalonia.Svg.Skia" Version="0.10.18" />
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
   </ItemGroup>
 </Project>
